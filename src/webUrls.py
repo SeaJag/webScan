@@ -2,7 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
-# l'exécutable Chrome (remplacer par DVWA)
+# l'exécutable Chrome 
+# To Do : Remplacer par DVWA
 chrome_options = Options()
 chrome_options.binary_location = '/chemin/vers/le/fichier/chrome'
 
