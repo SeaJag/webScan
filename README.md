@@ -2,7 +2,7 @@
 
 # Contexte
 
-Scanner une application web à la recherche de failles de sécurité courantes telles que les injections SQL, les failles XSS, les failles CSRF (check présence d’un token ou non par exemple ,..). Faire un reporting montrant la faille (l’input) ainsi que des recommandations pour patcher les failles.
+Scanneur d'application web à la recherche de failles de sécurité courantes telles que les injections SQL, les failles XSS, les failles CSRF (check présence d’un token ou non par exemple ,..). Faire un reporting montrant la faille (l’input) ainsi que des recommandations pour patcher les failles.
 
 # Fonctionnement du programme : 
 - Input : Prend en paramètre un lien
