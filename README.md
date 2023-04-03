@@ -5,8 +5,8 @@
 Scanner une application web à la recherche de failles de sécurité courantes telles que les injections SQL, les failles XSS, les failles CSRF (check présence d’un token ou non par exemple ,..). Faire un reporting montrant la faille (l’input) ainsi que des recommandations pour patcher les failles.
 
 # Fonctionnement du programme : 
-- Prend en paramètre un lien
-- Retourne un reporting avec les failles ainsi que des recommandations 
+- Input : Prend en paramètre un lien
+- Output : Reporting avec les failles ainsi que des recommandations 
 
 
 # Planning : 
