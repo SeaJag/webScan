@@ -2,7 +2,7 @@
 
 # Contexte
 
-Scanner une application web à la recherche de failles de sécurité courantes telles que les injections SQL, les failles XSS, les failles CSRF (check présence d’un token ou non par exemple ,..). Faire un reporting montrant la faille (l’input) ainsi que des recommandations pour patcher les failles.
+Scanneur d'application web à la recherche de failles de sécurité courantes telles que les injections SQL, les failles XSS, les failles CSRF (check présence d’un token ou non par exemple ,..). Faire un reporting montrant la faille (l’input) ainsi que des recommandations pour patcher les failles.
 
 # Fonctionnement du programme : 
 - Input : Prend en paramètre un lien
@@ -18,6 +18,8 @@ Scanner une application web à la recherche de failles de sécurité courantes t
 |X| Définition du scope et répartition des taches pour les différents membres de l’équipe 
 
 |X| Choix des outils utilisés
+
+|X| Déployer DVWA sur une VM
 
 |X| Dev le scrapper des toutes les pages du site Web
 
