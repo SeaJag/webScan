@@ -8,7 +8,7 @@ Faire un reporting montrant la faille (l’input) ainsi que des recommandations 
 
 # Planning : 
 
-## Premier jalon (05/04/2023):  
+## Premier jalon :  
 
 Création dépôt Git 
 
