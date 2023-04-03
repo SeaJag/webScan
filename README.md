@@ -2,32 +2,36 @@
 
 # Contexte
 
-Scanner une application web à la recherche de failles de sécurité courantes telles que les injections SQL, les failles XSS, les failles CSRF (check présence d’un token ou non par exemple ,..). 
+Scanner une application web à la recherche de failles de sécurité courantes telles que les injections SQL, les failles XSS, les failles CSRF (check présence d’un token ou non par exemple ,..). Faire un reporting montrant la faille (l’input) ainsi que des recommandations pour patcher les failles.
 
-Faire un reporting montrant la faille (l’input) ainsi que des recommandations pour patcher les failles  
+# Fonctionnement du programme : 
+- Input : Prend en paramètre un lien
+- Output : Reporting avec les failles ainsi que des recommandations 
+
 
 # Planning : 
 
-## Premier jalon (05/04/2023):  
+## Premier jalon :  
 
-Création dépôt Git 
+|X| Création dépôt Git 
 
-Définition du scope et répartition des taches pour les différents membres de l’équipe 
+|X| Définition du scope et répartition des taches pour les différents membres de l’équipe 
 
-Choix des outils utilisés 
+|X| Choix des outils utilisés
+
+|X| Dev le scrapper des toutes les pages du site Web
 
 ## Second jalon :  
 
-Revus du code / débogage avec Road Map (Avec doc,….) 
+| . | Initier le programme pour scrapper l'application DVWA
 
-Test unitaire sur une application web  
+| . | Scrapper l'ensemble des inputs de l'application 
 
-Génération de logs via le script créé pour une faille 
+| . | Tester les inputs avec différentes injections (sql, csrf...)
+
 
 ## Troisième jalon : 
 
-Générer un rapport pour chaque faille détectée, y compris les informations sur l'input ayant mené à la faille 
+| . | Générer un rapport pour chaque faille détectée
 
-## Quatrième jalon : 
-
-Documentation sur les outils utilisés 
+| . | Rédaction de docuementation sur les outils utilisées 
