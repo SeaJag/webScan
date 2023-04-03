@@ -11,7 +11,7 @@ chrome_options.binary_location = '/chemin/vers/le/fichier/chrome'
 driver = webdriver.Chrome(options=chrome_options)
 
 # Open page
-driver.get("https://www.example.com")
+driver.get("http://10.41.164.36/dvwa")
 
 # Find all links
 links = driver.find_elements_by_tag_name("a")
