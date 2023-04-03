@@ -19,6 +19,8 @@ Scanneur d'application web à la recherche de failles de sécurité courantes te
 
 |X| Choix des outils utilisés
 
+|X| Déployer DVWA sur une VM
+
 |X| Dev le scrapper des toutes les pages du site Web
 
 ## Second jalon :  
