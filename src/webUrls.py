@@ -1,34 +1,18 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
+import requests
+from bs4 import BeautifulSoup
 
-# l'exécutable Chrome 
-# To Do : Remplacer par DVWA
-chrome_options = Options()
-chrome_options.binary_location = '/chemin/vers/le/fichier/chrome'
+# URL DVWA
+url = "http://192.168.1.27/dvwa/"
 
-# Init Nav
-driver = webdriver.Chrome(options=chrome_options)
+# requête GET
+response = requests.get(url)
 
-# Open page
-driver.get("http://10.41.164.36/dvwa")
+# Parsez le contenu HTML de la repp
+soup = BeautifulSoup(response.content, "html.parser")
 
-# Find all links
-links = driver.find_elements_by_tag_name("a")
+# Chercher les liens
+links = soup.find_all("a")
 
-# Parcours des liens et récupération des URLs associées
-urls = []
+# Lister les liens
 for link in links:
-    url = link.get_attribute("href")
-    if url is not None and url not in urls:
-        urls.append(url)
-        # Clique on link
-        link.click()
-        # Retour en arrière
-        driver.back()
-
-# Fermeture du navigateur
-driver.quit()
-
-# URLs récupérées
-print(urls)
+    print(link.get("href"))
