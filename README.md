@@ -8,6 +8,10 @@ Scanneur d'application web à la recherche de failles de sécurité courantes te
 - Input : Prend en paramètre un lien
 - Output : Reporting avec les failles ainsi que des recommandations 
 
+# Lancer le programme : 
+## Run DVWA : 
+## Run le script : 
+
 
 # Planning : 
 
