@@ -27,7 +27,7 @@ Scanneur d'application web à la recherche de failles de sécurité courantes te
 
 |X| Initier le programme pour scrapper l'application DVWA
 
-|X| Avoir un PoC sur une injection 
+|.| Avoir un PoC sur une injection 
 
 
 ## Troisième jalon : 
