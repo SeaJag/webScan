@@ -1,18 +1,39 @@
 import requests
+import re
 from bs4 import BeautifulSoup
 
-# URL DVWA
-url = "http://192.168.1.27/dvwa/"
+# login to DVWA
+login_url = 'http://172.17.0.1/login.php'
+username = 'admin'
+password = 'password'
 
-# requête GET
-response = requests.get(url)
+# Create session
+session = requests.Session()
 
-# Parsez le contenu HTML de la repp
+# Get Token
+response = session.get(login_url)
+token = re.findall("user_token'\s*value='(.*?)'", response.text)[0]
+
+# Login to DVWA
+response = session.post(login_url, data={
+    'username': username,
+    'password': password,
+    'user_token': token,
+    'Login': 'Login'
+})
+
+# Get HTML
+url = 'http://172.17.0.1/'
+response = session.get(url)
+
+# Parse HTML & Find Links
 soup = BeautifulSoup(response.content, "html.parser")
-
-# Chercher les liens
 links = soup.find_all("a")
 
-# Lister les liens
+# Add url to List
+url_list = []
 for link in links:
-    print(link.get("href"))
+    url_list.append(link.get("href"))
+
+# Imprimer la liste des URLs
+print(url_list)
