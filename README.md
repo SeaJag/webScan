@@ -13,27 +13,27 @@ Scanneur d'application web à la recherche de failles de sécurité courantes te
 
 ## Premier jalon :  
 
-|X| Création dépôt Git 
+* [x] Création dépôt Git 
 
-|X| Définition du scope et répartition des taches pour les différents membres de l’équipe 
+* [x] Définition du scope et répartition des taches pour les différents membres de l’équipe 
 
-|X| Choix des outils utilisés
+* [x] Choix des outils utilisés
 
-|X| Déployer DVWA sur une VM
+* [x] Déployer DVWA sur une VM
 
-|X| Dev le scrapper des toutes les pages du site Web
+* [x] Dev le scrapper des toutes les pages du site Web
 
 ## Second jalon :  
 
-|X| Initier le programme pour scrapper l'application DVWA
+* [x] Initier le programme pour scrapper l'application DVWA
 
-|.| Avoir un PoC sur une injection 
+* [ ] Avoir un PoC sur une injection 
 
 
 ## Troisième jalon : 
 
-| . | Tester les inputs de toutes les pages avec plusieurs injections
+* [ ] Tester les inputs de toutes les pages avec plusieurs injections
 
-| . | Générer un rapport pour chaque faille détectée
+* [ ] Générer un rapport pour chaque faille détectée
 
-| . | Rédaction de docuementation sur les outils utilisées 
+* [ ] Rédaction de docuementation sur les outils utilisées 
