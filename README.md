@@ -34,7 +34,7 @@ Scanneur d'application web à la recherche de failles de sécurité courantes te
 
 * [ ] Tester les inputs de toutes les pages avec plusieurs injections
 
-* [ ] Rédiger un Doc / Readme
+* [ ] Rédiger une Doc / Readme
 
 * [ ] Générer un rapport pour chaque faille détectée
 
