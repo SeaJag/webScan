@@ -25,14 +25,14 @@ Scanneur d'application web à la recherche de failles de sécurité courantes te
 
 ## Second jalon :  
 
-| . | Initier le programme pour scrapper l'application DVWA
+|X| Initier le programme pour scrapper l'application DVWA
 
-| . | Scrapper l'ensemble des inputs de l'application 
-
-| . | Tester les inputs avec différentes injections (sql, csrf...)
+|X| Avoir un PoC sur une injection 
 
 
 ## Troisième jalon : 
+
+| . | Tester les inputs de toutes les pages avec plusieurs injections
 
 | . | Générer un rapport pour chaque faille détectée
 
