@@ -38,14 +38,14 @@ Web application scanner searching for common security vulnerabilities such as SQ
 
 * [x] Initier le programme pour scrapper l'application DVWA
 
-* [ ] Avoir un PoC sur une injection 
+* [x] Avoir un PoC sur une injection 
 
 
 ## Troisième jalon : 
 
-* [ ] Tester les inputs de toutes les pages avec plusieurs injections
+* [x] Tester les inputs de toutes les pages avec plusieurs injections
 
-* [ ] Rédiger une Doc / Readme
+* [ ] Rédiger une Doc / Mettre à jour le Readme
 
 * [ ] Générer un rapport pour chaque faille détectée
 
