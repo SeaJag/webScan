@@ -9,6 +9,6 @@ url_list = get_url_list(session, toCheck)
 print("\n===========================   Liste des pages à tester   =======================================")
 print(url_list)
 
-print("\n===========================   Rapport des failles détectées   =======================================")
+print("\n================================   Rapport des failles détectées   ===========================================")
 check_vulnerabilities(session, url_list)
-print("================================       Fin du Rapport       =========================================")
+print("====================================       Fin du Rapport       ==============================================")
