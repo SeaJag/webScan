@@ -22,7 +22,7 @@ Web application scanner searching for common security vulnerabilities such as SQ
 
 # Planning : 
 
-## Premier jalon :  
+## Premier jalon (07/04/2023) :  
 
 * [x] Création dépôt Git 
 
@@ -34,19 +34,24 @@ Web application scanner searching for common security vulnerabilities such as SQ
 
 * [x] Dev le scrapper des toutes les pages du site Web
 
-## Second jalon :  
+## Second jalon (15/04/2023) :  
 
 * [x] Initier le programme pour scrapper l'application DVWA
 
 * [x] Avoir un PoC sur une injection 
 
+* [x] Tester les inputs de toutes les pages avec plusieurs injections (injection XSS, SQL et LFI)
 
-## Troisième jalon : 
+* [x] Développer une V1 du rapport : Type de faille - Page vulnérable - Payload utilisée
 
-* [x] Tester les inputs de toutes les pages avec plusieurs injections
+## Troisième jalon (21/04/2023) : 
 
-* [ ] Rédiger une Doc / Mettre à jour le Readme
+* [ ] Rédiger une Doc / Mettre à jour le README
 
-* [ ] Générer un rapport pour chaque faille détectée
+* [ ] Développer les tests unitaires
 
-* [ ] Rédaction de docuementation sur les outils utilisées 
+* [ ] Développer la version finale du rapport
+
+* [ ] Documentation de prise en main
+
+* [ ] Faire une vidéo de démo
