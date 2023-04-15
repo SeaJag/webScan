@@ -12,5 +12,6 @@ print("\n===========================   Liste des pages à tester   =============
 print(url_list)
 
 print("\n================================   Rapport des failles détectées   ===========================================")
-check_vulnerabilities(session, url_list, host)
+xss_count, sql_count, lfi_count = check_vulnerabilities(session, url_list, host)
+print(f"\n\nBILAN : \nNombre de failles détectées : {xss_count + sql_count + lfi_count} \nXSS Injection = {xss_count}\nSQL Injection = {sql_count}\nLFI = {lfi_count}")
 print("====================================       Fin du Rapport       ==============================================")
