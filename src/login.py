@@ -1,8 +1,8 @@
 import requests
 import re
 
-def login():
-    login_url = 'http://172.17.0.1/login.php'
+def login(host):
+    login_url = host + '/login.php'
     username = 'admin'
     password = 'password'
 
