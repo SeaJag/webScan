@@ -14,4 +14,21 @@ print(url_list)
 print("\n================================   Rapport des failles détectées   ===========================================")
 xss_count, sql_count, lfi_count = check_vulnerabilities(session, url_list, host)
 print(f"\n\nBILAN : \nNombre de failles détectées : {xss_count + sql_count + lfi_count} \nXSS Injection = {xss_count}\nSQL Injection = {sql_count}\nLFI = {lfi_count}")
-print("====================================       Fin du Rapport       ==============================================")
+
+print("\n=====================================       Recommendation Patch Vulnérabilités       ==============================================")
+if (xss_count > 0):
+    print("\n***************Voici nos recommendations pour les failles XSS***************\n")
+    a = open("/home/kali/projectpython/webScan/src/Recommendation/XSS_recommendation.txt", "r")
+    print(a.read())
+    a.close()
+if (sql_count > 0):
+    print("\n***************Voici nos recommendations pour les failles SQL***************\n")
+    a = open("/home/kali/projectpython/webScan/src/Recommendation/SQL_recommendation.txt", "r")
+    print(a.read())
+if (lfi_count > 0):
+    print("\n***************Voici nos recommendations pour les failles LFI***************\n")
+    c = open("/home/kali/projectpython/webScan/src/Recommendation/LFI_recommendation.txt", "r")
+    print(c.read())
+
+
+print("\n=====================================       Fin du Rapport       ==============================================")

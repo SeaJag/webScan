@@ -1,0 +1,14 @@
+Les injections XSS font partie de la catégorie des vulnérabilités par injection de code au même titre que les injections SQL. Cependant pour découvrir et exploiter une faille XSS, il s’agit pour un attaquant d’injecter du code malveillant via les paramètres d’entrée côté client.
+
+Comment s'en protéger?
+
+Au niveau du code PHP :
+- L'attaque XSS est dues à des entrées provenant de l'extérieur (donc non fiables). La solution consiste donc à filtrer les entrées de l'utilisateur en appliquant les fonctions comme addslashes() ou strip_tags() qui supprime toutes les balises contenues dans la chaine entrée.
+
+- Il ne faut autoriser qu'une certaine longueur maximale pour les entrées en la vérifiant à l'aide de la fonction strlen() ou en la tronquant systématiquement à l'aide la fonction substr().
+
+Au niveau de la configuration du serveur :
+- Activer la directive magic_quotes_gpc dans le fichier php.ini. Cela permet d'échapper automatiquement tous les caractères spéciaux (notamment les simples et doubles quotes) figurants dans les chaines provenantn l'extérieur. -> "magic_quotes_gpc = On"
+CSP :
+- Appliquer le mécanisme Content Security Policy. Il faut définir des règles de scripts CSP (Content Security Policy). Elles permettent d’autoriser le contenu selon une liste que vous décidez et donc d’interdire de charger des types de contenus spécifiques. 
+Vous pouvez ainsi définir si des scripts externes peuvent être chargés, si des scripts inline peuvent être exécutés, si des ressources peuvent être chargées depuis la même origine que la page principale, etc…
