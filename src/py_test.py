@@ -13,16 +13,22 @@ class TestGetUrlList(unittest.TestCase):
         url = "http://172.17.0.1"
         result = get_url_list(session, url)
         self.assertIsInstance(result, list)
+    def test_returns_list1(self):
+        session = requests.Session()
+        url = "http://google.com"
+        result = get_url_list(session, url)
+        self.assertIsInstance(result, list)
 
-#class TestCheckVulnerabilities(unittest.TestCase):
-#    def test_no_vulnerabilities(self):
-#        session = requests.Session()
-#        url_list = ['/page1', '/page2', '/page3']
-#        host = "127.17.0.2"
-#        with patch('sys.stdout', new=StringIO()) as fake_output:
-#            result = check_vulnerabilities(session, url_list, host)
-#        self.assertEqual(result, (0, 0, 0))
-#        self.assertEqual(fake_output.getvalue(), "")
+class TestCheckVulnerabilities(unittest.TestCase):
+    def test_no_vulnerabilities(self):
+        session = requests.Session()
+        url_list = ['/page1', '/page2', '/page3']
+        host = "http://127.17.0.1"
+        with patch('sys.stdout', new=StringIO()) as fake_output:
+            result = check_vulnerabilities(session, url_list, host)
+        self.assertEqual(result, (0, 0, 0))
+        self.assertEqual(fake_output.getvalue(), "")
+
 
 if __name__ == '__main__':
     unittest.main()
