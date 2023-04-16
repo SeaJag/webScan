@@ -1,4 +1,4 @@
-Les injections SQL font partie de la catégorie des vulnérabilités par injection de code au même titre que les injections XSS. Il s’agit d’ajouter une requête non prévue à une requête SQL pour interagir avec la base de données. Une faille SQLi permet de voler ou modifier des données, voire exécuter du code à distance.
+Les injections SQL font partie de la catégorie des vulnérabilités par injection de code au même titre que les injections XSS. Il s’agit d’ajouter une requête non prévue à une requête SQL pour interagir avec la base de données. Une faille SQL permet de voler ou modifier des données, voire exécuter du code à distance.
 
 Comment s'en protéger?
 
@@ -11,5 +11,5 @@ On peut tout simplement échapper les caractères spéciaux contenus dans les ch
 - Faire une authentification en deux temps. Au lieu de vérifier le login et le mot de passe dans la même requête, on sépare ce traitement en deux. On demande d'abord le login, et si celui-ci est correcte on demande ensuite le mot de passe.
 
 Au niveau de la configuration du serveur :
-- En modifiant le dichier de configuration du moteur php appelé php.ini. Il s'agit d'un fichier texte qui contient un ensemble de directives qui permettent de personnaliser certains aspects du comportement du moteur PHP. "magic_quotes_gpc" peut-être utilisé pour échapper automatiquement les caractères spéciaux présents dans les chaines de caractères entrantes (qui proviennent des formulaires, barre URL et cookies). 
+- En modifiant le fichier de configuration du moteur php appelé php.ini. Il s'agit d'un fichier texte qui contient un ensemble de directives qui permettent de personnaliser certains aspects du comportement du moteur PHP. "magic_quotes_gpc" peut-être utilisé pour échapper automatiquement les caractères spéciaux présents dans les chaines de caractères entrantes (qui proviennent des formulaires, barre URL et cookies). 
 Elle agit en fait comme la fonction addslashes() mais d'une manière automatisées. -> "magic_quotes_gpc = On"

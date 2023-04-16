@@ -18,17 +18,17 @@ print(f"\n\nBILAN : \nNombre de failles détectées : {xss_count + sql_count + l
 print("\n=====================================       Recommendation Patch Vulnérabilités       ==============================================")
 if (xss_count > 0):
     print("\n***************Voici nos recommendations pour les failles XSS***************\n")
-    a = open("/home/kali/projectpython/webScan/src/Recommendation/XSS_recommendation.txt", "r")
-    print(a.read())
-    a.close()
+    f = open("/home/kali/projectpython/webScan/src/Recommendation/XSS_recommendation.txt", "r")
+    print(f.read())
+    f.close()
 if (sql_count > 0):
     print("\n***************Voici nos recommendations pour les failles SQL***************\n")
-    a = open("/home/kali/projectpython/webScan/src/Recommendation/SQL_recommendation.txt", "r")
-    print(a.read())
+    f = open("/home/kali/projectpython/webScan/src/Recommendation/SQL_recommendation.txt", "r")
+    print(f.read())
 if (lfi_count > 0):
     print("\n***************Voici nos recommendations pour les failles LFI***************\n")
-    c = open("/home/kali/projectpython/webScan/src/Recommendation/LFI_recommendation.txt", "r")
-    print(c.read())
+    f = open("/home/kali/projectpython/webScan/src/Recommendation/LFI_recommendation.txt", "r")
+    print(f.read())
 
 
 print("\n=====================================       Fin du Rapport       ==============================================")

@@ -9,6 +9,7 @@ Au niveau du code PHP :
 
 Au niveau de la configuration du serveur :
 - Activer la directive magic_quotes_gpc dans le fichier php.ini. Cela permet d'échapper automatiquement tous les caractères spéciaux (notamment les simples et doubles quotes) figurants dans les chaines provenantn l'extérieur. -> "magic_quotes_gpc = On"
+
 CSP :
 - Appliquer le mécanisme Content Security Policy. Il faut définir des règles de scripts CSP (Content Security Policy). Elles permettent d’autoriser le contenu selon une liste que vous décidez et donc d’interdire de charger des types de contenus spécifiques. 
 Vous pouvez ainsi définir si des scripts externes peuvent être chargés, si des scripts inline peuvent être exécutés, si des ressources peuvent être chargées depuis la même origine que la page principale, etc…
