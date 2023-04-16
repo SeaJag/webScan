@@ -48,6 +48,8 @@ Web application scanner searching for common security vulnerabilities such as SQ
 
 * [ ] Rédiger une Doc / Mettre à jour le README
 
+* [x] Doxygen
+
 * [ ] Développer les tests unitaires
 
 * [ ] Développer la version finale du rapport
