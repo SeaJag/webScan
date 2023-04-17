@@ -4,56 +4,77 @@
 
 Web application scanner searching for common security vulnerabilities such as SQL injections, XSS flaws, and CSRF flaws (checking for the presence of a token, for example). Generate a report showing the vulnerability (the input) as well as recommendations for patching the flaws.
 
-# Fonctionnement du programme : 
-- Input : Prend en paramètre un lien
-- Output : Reporting avec les failles ainsi que des recommandations 
+# Fonctionnement du programme :
+
+- Input : Takes as parameter a link
+- Output : Reporting with vulnerabilities and recommendations
 
 # Dockerfile
 
 ## Build image :
+
 ```bash
     docker build -t webscan .
 ```
 
-# Lancer le programme : 
-## Run DVWA : 
-## Run le script : 
+# Lancer le programme :
 
+## Run DVWA :
 
-# Planning : 
+```bash
+docker run --rm -it -d -p 127.0.0.1:80:80 webscan
+```
 
-## Premier jalon (07/04/2023) :  
+## Run le script :
 
-* [x] Création dépôt Git 
+```bash
+python3 src/main.py
+```
 
-* [x] Définition du scope et répartition des taches pour les différents membres de l’équipe 
+## Build Doc:
 
-* [x] Choix des outils utilisés
+```bash
+doxygen Doxyfile
+```
 
-* [x] Déployer DVWA sur une VM
+# Planning :
 
-* [x] Dev le scrapper des toutes les pages du site Web
+## Premier jalon (07/04/2023) :
 
-## Second jalon (15/04/2023) :  
+- [x] Création dépôt Git
 
-* [x] Initier le programme pour scrapper l'application DVWA
+- [x] Définition du scope et répartition des taches pour les différents membres de l’équipe
 
-* [x] Avoir un PoC sur une injection 
+- [x] Choix des outils utilisés
 
-* [x] Tester les inputs de toutes les pages avec plusieurs injections (injection XSS, SQL et LFI)
+- [x] Déployer DVWA sur une VM
 
-* [x] Développer une V1 du rapport : Type de faille - Page vulnérable - Payload utilisée
+- [x] Dev le scrapper des toutes les pages du site Web
 
-## Troisième jalon (21/04/2023) : 
+## Second jalon (15/04/2023) :
 
-* [ ] Rédiger une Doc / Mettre à jour le README
+- [x] Initier le programme pour scrapper l'application DVWA
 
-* [x] Doxygen
+- [x] Avoir un PoC sur une injection
 
-* [ ] Développer les tests unitaires
+- [x] Tester les inputs de toutes les pages avec plusieurs injections (injection XSS, SQL et LFI)
 
-* [ ] Développer la version finale du rapport
+- [x] Développer une V1 du rapport : Type de faille - Page vulnérable - Payload utilisée
 
-* [ ] Documentation de prise en main
+## Troisième jalon (21/04/2023) :
 
-* [ ] Faire une vidéo de démo
+- [ ] Rédiger une Doc / Mettre à jour le README
+
+- [x] Doxygen
+
+- [ ] Développer les tests unitaires
+
+- [ ] Développer la version finale du rapport
+
+- [ ] Documentation de prise en main
+
+- [ ] Faire une vidéo de démo
+
+```
+
+```
