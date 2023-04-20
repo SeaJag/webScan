@@ -4,54 +4,93 @@
 
 Web application scanner searching for common security vulnerabilities such as SQL injections, XSS flaws, and CSRF flaws (checking for the presence of a token, for example). Generate a report showing the vulnerability (the input) as well as recommendations for patching the flaws.
 
-# Fonctionnement du programme : 
-- Input : Prend en paramètre un lien
-- Output : Reporting avec les failles ainsi que des recommandations 
+# Fonctionnement du programme :
+
+- Input : Takes as parameter a link
+- Output : Reporting with vulnerabilities and recommendations
 
 # Dockerfile
 
 ## Build image :
+
 ```bash
-    docker build -t webscan .
+docker build -t webscan .
 ```
 
-## Developpement
+# Lunch program : 
+
+## 1. Run DVWA :
+
 ```bash
-    docker run -it -v $(pwd):/scan  -p 80:80/tcp webscan:latest
+docker run --rm -it -d -p 127.0.0.1:80:80 webscan
 ```
 
-# Lancer le programme : 
-## Run DVWA : 
-## Run le script : 
+Go to web browser connect to DVWA with:
+```bash
+admin:password
+```
 
+## 2. Install dependancy
 
-# Planning : 
+```bash
+pip3 install -r requirements.txt
+```
 
-## Premier jalon :  
+## 3. Run script :
 
-* [x] Création dépôt Git 
+```bash
+python3 src/main.py
+```
 
-* [x] Définition du scope et répartition des taches pour les différents membres de l’équipe 
+## 4. Run test :
+```bash
+python3 src/py_test.py
+```
 
-* [x] Choix des outils utilisés
+# Build Doc:
 
-* [x] Déployer DVWA sur une VM
+```bash
+doxygen Doxyfile
+```
 
-* [x] Dev le scrapper des toutes les pages du site Web
+# Planning :
 
-## Second jalon :  
+## Premier jalon (07/04/2023) :
 
-* [x] Initier le programme pour scrapper l'application DVWA
+- [x] Création dépôt Git
 
-* [ ] Avoir un PoC sur une injection 
+- [x] Définition du scope et répartition des taches pour les différents membres de l’équipe
 
+- [x] Choix des outils utilisés
 
-## Troisième jalon : 
+- [x] Déployer DVWA sur une VM
 
-* [ ] Tester les inputs de toutes les pages avec plusieurs injections
+- [x] Dev le scrapper des toutes les pages du site Web
 
-* [ ] Rédiger une Doc / Readme
+## Second jalon (15/04/2023) :
 
-* [ ] Générer un rapport pour chaque faille détectée
+- [x] Initier le programme pour scrapper l'application DVWA
 
-* [ ] Rédaction de docuementation sur les outils utilisées 
+- [x] Avoir un PoC sur une injection
+
+- [x] Tester les inputs de toutes les pages avec plusieurs injections (injection XSS, SQL et LFI)
+
+- [x] Développer une V1 du rapport : Type de faille - Page vulnérable - Payload utilisée
+
+## Troisième jalon (21/04/2023) :
+
+- [x] Rédiger une Doc / Mettre à jour le README
+
+- [x] Doxygen
+
+- [x] Développer les tests unitaires
+
+- [ ] Développer la version finale du rapport
+
+- [ ] Documentation de prise en main
+
+- [ ] Faire une vidéo de démo
+
+```
+
+```

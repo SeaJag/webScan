@@ -1,0 +1,12 @@
+Une vulnérabilité LFI vise à inclure des fichiers externes au moment de l'exécution du code. La vulnérabilité se crée car il n'y a pas de vérification suffisante au niveau des entrées du site web.
+
+Au niveau du code PHP:
+- Filtrer les entrées de l'utilisateur. Similaire aux autres attaques, le meilleur moyen en php pour s'en prémunir, est de filtrer les entrées. Etant donné que le paramètre GET passé par le pirate est souvent trop long, il faut commencer par limiter la longueur autorisée.
+
+Au niveau de la configuration du serveur :
+- En modifiant le fichier de configuration du moteur php appelé php.ini. Il s'agit d'un fichier texte qui contient un ensemble de directives qui permettent de personnaliser certains aspects du comportement du moteur PHP. "magic_quotes_gpc" peut-être utilisé pour échapper automatiquement les caractères spéciaux présents dans les chaines de caractères entrantes (qui proviennent des formulaires, barre URL et cookies). 
+Elle agit en fait comme la fonction addslashes() mais d'une manière automatisées. -> "magic_quotes_gpc = On"
+
+- Il existe une directive qui permet de spécifier si l'on autorise ou non de récupérer des fichiers externes pour les inclure au moment de l'exécution. 
+Sur le fichier php.ini, il faut désactiver la directive suivante -> "allow_url_fopen = Off"
+

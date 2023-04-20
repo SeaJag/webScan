@@ -4,8 +4,8 @@ ADD . /webscan/
 
 WORKDIR /webscan
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y python3 python3-pip
+RUN apt update && \
+    apt upgrade -y && \
+    apt install -y python3 python3-pip doxygen doxygen-gui doxygen-doc
 
 RUN pip3 install -r requirements.txt
