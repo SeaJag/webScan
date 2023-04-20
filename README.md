@@ -15,6 +15,11 @@ Web application scanner searching for common security vulnerabilities such as SQ
     docker build -t webscan .
 ```
 
+## Developpement
+```bash
+    docker run -it -v $(pwd):/scan  -p 80:80/tcp webscan:latest
+```
+
 # Lancer le programme : 
 ## Run DVWA : 
 ## Run le script : 
