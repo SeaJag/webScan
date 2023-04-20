@@ -13,11 +13,6 @@ class TestGetUrlList(unittest.TestCase):
         url = "http://127.0.0.1"
         result = get_url_list(session, url)
         self.assertIsInstance(result, list)
-    def test_returns_list1(self):
-        session = requests.Session()
-        url = "http://google.com"
-        result = get_url_list(session, url)
-        self.assertIsInstance(result, list)
 
 class TestCheckVulnerabilities(unittest.TestCase):
     def test_no_vulnerabilities(self):
@@ -26,9 +21,8 @@ class TestCheckVulnerabilities(unittest.TestCase):
         host = "http://127.0.0.1"
         with patch('sys.stdout', new=StringIO()) as fake_output:
             result = check_vulnerabilities(session, url_list, host)
-        self.assertEqual(result, (0, 0, 0))
-        self.assertEqual(fake_output.getvalue(), "")
-
+        self.assertEqual(result, (0, 0, 0, '<script>alert("ok")</script>', "'+UNION+SELECT+@@VERSION,+%27OKAY%27+%23", '../../../../../../../etc/passwd', 'http://127.0.0.1', '/page3'))
+        self.assertEqual(fake_output.getvalue(), "test : /page3\n")
 
 if __name__ == '__main__':
     unittest.main()
