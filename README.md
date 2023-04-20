@@ -11,18 +11,19 @@ Web application scanner searching for common security vulnerabilities such as SQ
 
 # Dockerfile
 
-## Build image :
+## Build image (developpement):
 
 ```bash
 docker build -t webscan .
 ```
+
 
 # Lunch program : 
 
 ## 1. Run DVWA :
 
 ```bash
-docker run --rm -it -d -p 127.0.0.1:80:80 webscan
+docker run --rm -it -d -p 80:80 vulnerables/web-dvwa
 ```
 
 Go to web browser connect to DVWA with:
