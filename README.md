@@ -26,7 +26,7 @@ docker build -t webscan .
 docker run --rm -it -d -p 80:80 vulnerables/web-dvwa
 ```
 
-Go to web browser connect to DVWA with:
+Go to browser connect to DVWA with:
 ```bash
 admin:password
 ```
