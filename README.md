@@ -55,6 +55,10 @@ python3 src/py_test.py
 doxygen Doxyfile
 ```
 
+# Remark: 
+There is a small bug on the generated PDF, it does not display the correct URL. Because the variable could not be sent. 
+However, on the Quick report (the one displayed in the Terminal), we can see the good vulnerable URLs as well as the payload used to detect it. 
+
 # Planning :
 
 ## Premier jalon (07/04/2023) :
