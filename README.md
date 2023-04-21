@@ -2,8 +2,11 @@
 
 # Context
 
-WebScan is a web application scanner searching for common security vulnerabilities as SQL injections, XSS flaws, and LFI injection.
-WebScan Generate a PDF report showing the vulnerability (the input) as well and the recommendations for patching the vulnerabilities.
+- WebScan is a web application scanner searching for common security vulnerabilities (SQL injections, XSS injection and LFI injection).
+- WebScan Generate automatically a PDF report showing the vulnerabilities detected and the input used to detetct. As well a recommendations for patching the vulnerabilities.
+
+## demonstration video :
+You can see a demo video on `Demo_Equipe_Cinq.mp4`
 
 # Requirement
 Before anythinge else you have to install docker at your machine. 
@@ -23,10 +26,10 @@ Go to browser connect to DVWA with 127.0.0.1 host:
 ```bash
 admin:password
 ```
-Login into web interface and at the end of page there are Create / Reset Database
-click at this button and relogin at the web interface. We will see the different challenge now.
+Login into web interface and at the end of page there are `Create / Reset Database`.
+Click at this button and relogin at the web interface. You will see the challenges.
 
-## 2. Install dependancy
+## 2. Install dependancies
 
 ```bash
 pip3 install -r requirements.txt
@@ -37,6 +40,9 @@ pip3 install -r requirements.txt
 ```bash
 python3 src/main.py
 ```
+This will generate : 
+- A quick report on the terminal
+- A detailed report in PDF
 
 ## 4. Run test :
 ```bash
