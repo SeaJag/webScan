@@ -9,14 +9,10 @@ Web application scanner searching for common security vulnerabilities such as SQ
 - Input : Takes as parameter a link
 - Output : Reporting with vulnerabilities and recommendations
 
-# Dockerfile
+# Requirement
+Before anythinge else we will install docker at your machine.
 
-## Build image (developpement):
-
-```bash
-docker build -t webscan .
-```
-
+[Install docker desktop on Ubuntu](https://docs.docker.com/desktop/install/ubuntu)
 
 # Lunch program : 
 
@@ -26,10 +22,12 @@ docker build -t webscan .
 docker run --rm -it -d -p 80:80 vulnerables/web-dvwa
 ```
 
-Go to browser connect to DVWA with:
+Go to browser connect to DVWA with 127.0.0.1 host:
 ```bash
 admin:password
 ```
+Login into web interface and at the end of page there are Create / Reset Database
+click at this button and relogin at the web interface. We will see the different challenge now.
 
 ## 2. Install dependancy
 
