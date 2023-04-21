@@ -5,13 +5,9 @@
 WebScan is a web application scanner searching for common security vulnerabilities as SQL injections, XSS flaws, and LFI injection.
 WebScan Generate a PDF report showing the vulnerability (the input) as well and the recommendations for patching the vulnerabilities.
 
-# Fonctionnement du programme :
-
-- Input : Takes as parameter a link
-- Output : Reporting with vulnerabilities and recommendations
-
 # Requirement
-Before anythinge else we will install docker at your machine.
+Before anythinge else you have to install docker at your machine. 
+(Go check Dockerfile)
 
 [Install docker desktop on Ubuntu](https://docs.docker.com/desktop/install/ubuntu)
 
@@ -79,15 +75,13 @@ doxygen Doxyfile
 
 ## Troisième jalon (21/04/2023) :
 
-- [x] Rédiger une Doc / Mettre à jour le README
-
-- [x] Doxygen
+- [x] Mettre à jour le README
 
 - [x] Développer les tests unitaires
 
 - [x] Développer la version finale du rapport
 
-- [x] Documentation de prise en main
+- [x] Documentation de prise en main avec Doxygen
 
 - [x] Faire une vidéo de démo
 
