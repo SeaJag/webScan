@@ -2,7 +2,8 @@
 
 # Context
 
-Web application scanner searching for common security vulnerabilities such as SQL injections, XSS flaws, and CSRF flaws (checking for the presence of a token, for example). Generate a report showing the vulnerability (the input) as well as recommendations for patching the flaws.
+WebScan is a web application scanner searching for common security vulnerabilities as SQL injections, XSS flaws, and LFI injection.
+WebScan Generate a PDF report showing the vulnerability (the input) as well and the recommendations for patching the vulnerabilities.
 
 # Fonctionnement du programme :
 
@@ -84,11 +85,11 @@ doxygen Doxyfile
 
 - [x] Développer les tests unitaires
 
-- [ ] Développer la version finale du rapport
+- [x] Développer la version finale du rapport
 
-- [ ] Documentation de prise en main
+- [x] Documentation de prise en main
 
-- [ ] Faire une vidéo de démo
+- [x] Faire une vidéo de démo
 
 ```
 
